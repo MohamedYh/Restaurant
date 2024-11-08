@@ -1,0 +1,225 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: url("/background.png"); */
+    /* background-size: 100vw; */
+    width: 100vw;
+    max-width: 2000px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5.5vh 8vw;
+    justify-content: space-between;
+    font-family: "BrownFalco";
+}
+ul {
+    list-style: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    font-size: 24px;
+    align-items: center;
+    font-family: 550;
+}
+
+ul > li:nth-child(5) {
+    background-color: red;
+    padding: 5px 18px;
+    border-radius: 4vw;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+ul > li:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: white;
+    transition: 300ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+ul > li:nth-child(5):hover::before,
+ul > li:nth-child(5):focus::before {
+    transform: scaleX(1);
+}
+
+ul > li:nth-child(5):hover {
+    color: black;
+}
+
+nav h1 {
+    font-size: 48px;
+    font-family: 450;
+}
+
+.header1 {
+    text-align: center;
+    font-family: "BrownFalco";
+    font-size: 54px;
+    margin-top: calc(36vh - 190px);
+    line-height: 1;
+}
+
+.paragraph1 {
+    text-align: center;
+    font-family: "Avenir";
+    margin-top: 4vh;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.order_now {
+    padding: 10px 32px;
+    border-radius: 50vw;
+    background-color: #d21200;
+    outline: none;
+    border: none;
+    font-size: 29px;
+    font-family: "Arial";
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10vh;
+    margin-bottom: 8vh;
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+    color: white;
+    z-index: 1;
+    overflow: hidden;
+}
+.order_now::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50%;
+    bottom: 0;
+    z-index: -1;
+    background-color: white;
+    transition: 400ms ease-in-out;
+    transform: scale(0);
+    height: 200%;
+    border-radius: 50%;
+    transform-origin: center;
+}
+
+.order_now:hover::before,
+.order_now:focus::before {
+    transform: scale(1);
+}
+
+.order_now:hover {
+    color: black;
+}
+
+.top3 {
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top3 img {
+    aspect-ratio: 1 / 1;
+    width: 24vw;
+    max-width: 480px;
+    height: fit-content;
+}
+
+.main_image_container {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    border: 15px solid white;
+    background-color: white;
+}
+
+.main_image_container img {
+    width: 37vw;
+    max-width: 740px;
+}
+
+.paragraph2 {
+    text-align: center;
+    font-family: "Avenir";
+    margin-top: 2vh;
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+/* .main_image_container::before {
+    content: "";
+    position: absolute;
+    width: 84px;
+    height: 70px;
+    background-image: url("../../public/chef_hat.png");
+} */
+
+.toplist {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+}
+
+.fdbox {
+    width: 350px;
+    height: 350px;
+    background-color: #392e2d;
+    border-radius: 32px;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.fdbox img {
+    width: 13vw;
+    height: 13vw;
+    position: absolute;
+    transform: translate(-4vw, -4vw);
+}
+
+#price {
+    display: flex;
+    justify-content: right;
+    transform: translateY(80px);
+    margin-right: 20px;
+    font-family: "Avenir Heavy";
+    color: white;
+    font-size: 24px;
+}
+
+.disc {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    left: 230px;
+    top: -5px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+}
+#fdname {
+    margin-top: 4vw;
+    color: white;
+    padding-left: 1.5vw;
+}

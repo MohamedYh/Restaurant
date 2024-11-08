@@ -1,0 +1,238 @@
+export const MenuData = {
+    pizza: [
+        {
+            name: "Margherita Pizza",
+            price: 19.25,
+            rating: 4.3,
+            image: "pizza.png",
+        },
+        {
+            name: "Pepperoni Pizza",
+            price: 12.99,
+            rating: 4.7,
+            image: "pizza.png",
+        },
+        {
+            name: "Hawaiian Pizza",
+            price: 18.99,
+            rating: 4.1,
+            image: "pizza.png",
+        },
+        {
+            name: "Four Cheese Pizza",
+            price: 25.5,
+            rating: 4.8,
+            image: "pizza.png",
+        },
+        {
+            name: "Vegetarian Pizza",
+            price: 20.0,
+            rating: 4.4,
+            image: "pizza.png",
+        },
+        {
+            name: "BBQ Chicken Pizza",
+            price: 19.5,
+            rating: 4.6,
+            image: "pizza.png",
+        },
+    ],
+    burgers: [
+        {
+            name: "Classic Cheeseburger",
+            price: 12.25,
+            rating: 4.2,
+            image: "burger.png",
+        },
+        {
+            name: "Double Cheeseburger",
+            price: 17.99,
+            rating: 4.5,
+            image: "burger.png",
+        },
+        {
+            name: "Mushroom Swiss Burger",
+            price: 19.99,
+            rating: 4.3,
+            image: "burger.png",
+        },
+        {
+            name: "Veggie Burger",
+            price: 30.5,
+            rating: 4.6,
+            image: "burger.png",
+        },
+        {
+            name: "Chicken Burger",
+            price: 28.5,
+            rating: 4.4,
+            image: "burger.png",
+        },
+        {
+            name: "Truffle Burger",
+            price: 29.5,
+            rating: 4.7,
+            image: "burger.png",
+        },
+    ],
+    sandwiches: [
+        {
+            name: "Turkey & Swiss",
+            price: 10.25,
+            rating: 4.3,
+            image: "sandwich.png",
+        },
+        {
+            name: "Ham & Cheddar",
+            price: 9.99,
+            rating: 4.2,
+            image: "sandwich.png",
+        },
+        {
+            name: "Grilled Cheese",
+            price: 10.99,
+            rating: 4.4,
+            image: "sandwich.png",
+        },
+        {
+            name: "Chicken Avocado",
+            price: 14.5,
+            rating: 4.5,
+            image: "sandwich.png",
+        },
+        {
+            name: "Caprese",
+            price: 15.0,
+            rating: 4.3,
+            image: "sandwich.png",
+        },
+    ],
+    salads: [
+        {
+            name: "Caesar Salad",
+            price: 12.25,
+            rating: 3.9,
+            image: "salad.png",
+        },
+        {
+            name: "Greek Salad",
+            price: 17.99,
+            rating: 4.4,
+            image: "salad.png",
+        },
+        {
+            name: "House Salad",
+            price: 19.99,
+            rating: 4.3,
+            image: "salad.png",
+        },
+        {
+            name: "Cobb Salad",
+            price: 30.5,
+            rating: 5,
+            images: "salad.png",
+        },
+        {
+            name: "Southwest Salad",
+            price: 28.5,
+            rating: 4.5,
+            image: "salad.png",
+        },
+    ],
+    juices: [
+        {
+            name: "Fresh Orange Juice",
+            price: 12.25,
+            rating: 4.5,
+            image: "juice.png",
+        },
+        {
+            name: "Apple Juice",
+            price: 17.99,
+            rating: 4.3,
+            image: "juice.png",
+        },
+        {
+            name: "Carrot Juice",
+            price: 19.99,
+            rating: 4.2,
+            image: "juice.png",
+        },
+        {
+            name: "Pineapple Juice",
+            price: 30.5,
+            rating: 4.6,
+            image: "juice.png",
+        },
+    ],
+    "french fries": [
+        {
+            name: "Original Salted Fries",
+            price: 12.25,
+            rating: 5,
+            images: "french_fries.png",
+        },
+        {
+            name: "Sweet Potato Fries",
+            price: 17.99,
+            rating: 4.5,
+            image: "french_fries.png",
+        },
+        {
+            name: "Crinkle-Cut Fries",
+            price: 19.99,
+            rating: 4.3,
+            image: "french_fries.png",
+        },
+        {
+            name: "Curly Fries",
+            price: 30.5,
+            rating: 4.6,
+            image: "french_fries.png",
+        },
+        {
+            name: "Cheese Fries",
+            price: 30.5,
+            rating: 4.7,
+            image: "french_fries.png",
+        },
+    ],
+    desserts: [
+        {
+            name: "Chocolate Fondant",
+            price: 25.5,
+            rating: 4.4,
+            image: "dessert.png",
+        },
+        {
+            name: "Tiramisu",
+            price: 7.99,
+            rating: 5,
+            images: "dessert.png",
+        },
+        {
+            name: "Baklava",
+            price: 12.99,
+            rating: 4.5,
+            image: "dessert.png",
+        },
+        {
+            name: "Crème Brûlée",
+            price: 13.5,
+            rating: 4.6,
+            image: "dessert.png",
+        },
+        {
+            name: "Fruit Tart",
+            price: 15.5,
+            rating: 4.2,
+            image: "dessert.png",
+        },
+        {
+            name: "Cheesecake",
+            price: 5.5,
+            rating: 4.3,
+            image: "dessert.png",
+        },
+    ],
+};
