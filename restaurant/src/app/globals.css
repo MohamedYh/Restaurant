@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @font-face {
-    font-family: "BrownFalco"; /* Replace with your desired font name */
-    src: local("BrownFalco"), url("fonts/Brown_Falco.otf") format("otf");
+    font-family: "Avenir";
+    src: local("Avenir"), url("./fonts/AvenirLTStd-Book.otf") format("otf");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: "Avenir"; /* Replace with your desired font name */
-    src: url("fonts/AvenirLTStd-Book.otf");
+    font-family: "BrownFalco";
+    src: local("BrownFalco"), url("./fonts/Brown_Falco.otf") format("otf");
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: "Avenir Heavy"; /* Replace with your desired font name */
+    font-family: "Avenir Heavy";
     src: url("fonts/AvenirLTStd-Heavy.otf");
     font-weight: normal;
     font-style: normal;
@@ -24,13 +27,11 @@ body {
 
 body {
     background-color: #d3d3d3;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     height: max-content;
 }
 
 .main_container {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     padding: 0;

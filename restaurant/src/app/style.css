@@ -75,7 +75,7 @@ nav h1 {
 
 .paragraph1 {
     text-align: center;
-    font-family: "Avenir";
+    font-family: "Rubik";
     margin-top: 4vh;
     font-size: 20px;
     line-height: 1.5;
@@ -118,7 +118,7 @@ nav h1 {
 
 .order_now:hover::before,
 .order_now:focus::before {
-    transform: scale(1);
+    transform: scale(1.2);
 }
 
 .order_now:hover {
@@ -154,7 +154,7 @@ nav h1 {
 
 .paragraph2 {
     text-align: center;
-    font-family: "Avenir";
+    font-family: "Rubik";
     margin-top: 2vh;
     font-size: 32px;
     line-height: 1.5;
@@ -178,19 +178,24 @@ nav h1 {
 
 .fdbox {
     width: 350px;
-    height: 350px;
+    height: 300px;
     background-color: #392e2d;
-    border-radius: 32px;
-    margin: 2vw;
+    border-radius: 49px;
+    margin: 80px 2vw;
     display: flex;
+    position: relative;
     flex-direction: column;
 }
 
+.dsc {
+    border: 10px solid red;
+}
+
 .fdbox img {
-    width: 13vw;
-    height: 13vw;
+    width: 280px;
+    height: 280px;
     position: absolute;
-    transform: translate(-4vw, -4vw);
+    transform: translate(-4vw, -140px);
 }
 
 #price {
@@ -204,12 +209,12 @@ nav h1 {
 }
 
 .disc {
-    width: 50px;
-    height: 50px;
+    width: 78px;
+    height: 78px;
     background: red;
     position: absolute;
-    left: 230px;
-    top: -5px;
+    right: 0;
+    top: -38px;
     border-radius: 50%;
     text-align: center;
     display: flex;
@@ -217,9 +222,219 @@ nav h1 {
     align-items: center;
     color: white;
     font-weight: 700;
+    font-size: 22px;
+    font-family: "Rubik Heavy";
 }
+
 #fdname {
-    margin-top: 4vw;
     color: white;
     padding-left: 1.5vw;
+    transform: translateY(120px);
+    font-size: 28px;
+    font-family: "BrownFalco";
+}
+
+#rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    position: absolute;
+    bottom: 38px;
+    left: 32px;
+    font-size: 22px;
+}
+
+.fdbox button {
+    position: absolute;
+    bottom: 23px;
+    right: 25px;
+    padding: 8px 16px;
+    font-size: 17px;
+    border-radius: inherit;
+    border: none;
+    background-color: white;
+    color: black;
+    font-family: "Rubik";
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 400ms;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.fdbox button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50%;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgb(255, 15, 15);
+    transition: 400ms ease-in-out;
+    transform: scale(0);
+    height: 200%;
+    border-radius: 50%;
+    transform-origin: center;
+}
+
+.fdbox button:hover::before,
+.fdbox button:focus::before {
+    transform: scale(1.2);
+}
+
+.fdbox button:hover {
+    color: white;
+}
+
+.fdbox button svg {
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+.fdbox p {
+    margin: 0;
+}
+
+.offer {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #2e2e2e, #ff5a5a);
+    width: 100vw;
+    padding: 7vh;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 2000px) {
+    .offer {
+        padding: 7vh calc(50vw - 1000px + 7vh);
+    }
+}
+
+.prt1 h1 {
+    color: white;
+    font-family: "Lexend", serif;
+    font-size: 64px;
+    width: 100%;
+}
+.prt1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prt2 {
+    width: fit-content;
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+.prt1 .order_now {
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+}
+
+.timeleft {
+    display: flex;
+    margin-top: 5vh;
+}
+
+.time_card {
+    padding: 20px 30px;
+    background-color: #e8e8e8;
+    width: 115px;
+    margin-right: 19px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.time_card p:first-child {
+    font-size: 45px;
+    font-weight: 913;
+    font-family: "Lexend";
+    color: rgba(57, 46, 45, 0.9);
+}
+
+.time_card p:first-child {
+    font-size: 45px;
+    font-weight: 913;
+    font-family: "Lexend";
+    color: rgba(57, 46, 45, 0.9);
+}
+
+.line {
+    width: 92%;
+    height: 2px;
+    background: gray;
+    margin: 1vh 0;
+}
+
+.time_card p:last-child {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Lexend";
+    color: rgba(57, 46, 45, 0.9);
+}
+
+.time_card::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 4px);
+    top: -12px;
+    width: 4px;
+    height: 20px;
+    background-color: gray;
+}
+
+.discount {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    color: white;
+    font-family: "Rubik";
+    font-weight: bolder;
+    font-size: 33px;
+    background: red;
+    padding: 10px;
+    border-radius: 44vw;
+    width: 110px;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prt2 img {
+    width: 500px;
+}
+
+.prvx {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding: 7vw 5vw;
+}
+
+.prvx h1 {
+    font-family: "Rubik";
+    font-weight: bolder;
+    font-size: 86px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.prvx img {
+    width: 37%;
 }

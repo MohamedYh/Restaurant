@@ -3,17 +3,63 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { HiArrowLongRight } from "react-icons/hi2";
 import Burger from "../../public/Menu/Images/shop/burger.png";
+import ChefImg from "../../public/chef.png";
 import { MenuData } from "../../public/Menu/data.js";
 import Pizza from "../../public/Menu/Images/shop/pizza.png";
 import Salad from "../../public/Menu/Images/shop/salad.png";
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { BiCartAdd } from "react-icons/bi";
 
 export const themes_color = ["#EAE5D9", "#2A2A2A"];
 export const themes_text_color = ["#1B1B1B", ""];
 
 export default function Home() {
     const [color_index, setColor_index] = useState(0);
+    const [offreStatus, setOffreStatus] = useState(true);
+    const [timeLeft, setTimeLeft] = useState([6, 23, 59, 59]);
+
+    const DecreaseTime = (
+        days: number,
+        hours: number,
+        minutes: number,
+        seconds: number
+    ) => {
+        console.log(seconds, "hds");
+        if (seconds != 0) {
+            seconds -= 1;
+        } else {
+            seconds = 59;
+            if (minutes != 0) {
+                minutes -= 1;
+            } else {
+                minutes = 59;
+                if (hours != 0) {
+                    hours -= 1;
+                } else {
+                    hours = 23;
+                    if (days != 0) {
+                        days -= 1;
+                    } else {
+                        setOffreStatus(true);
+                    }
+                }
+            }
+        }
+        return [days, hours, minutes, seconds];
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            console.log("h");
+            setTimeLeft(
+                DecreaseTime(timeLeft[0], timeLeft[1], timeLeft[2], timeLeft[3])
+            );
+        }, 1000);
+
+        // Cleanup interval on component unmount
+        return () => clearInterval(interval);
+    }, [timeLeft]);
 
     return (
         <div
@@ -92,41 +138,97 @@ export default function Home() {
 
                         return (
                             <>
-                                <div className="fdbox">
+                                <div
+                                    className={
+                                        dt.discount != "No"
+                                            ? `fdbox dsc`
+                                            : "fdbox"
+                                    }
+                                >
                                     <img
                                         src={`/Menu/Images/shop/${dt.image}`}
                                     />
-                                    <div className="disc">-35%</div>
+                                    {dt.discount != "No" && (
+                                        <div className="disc">
+                                            {dt.discount + "%"}
+                                        </div>
+                                    )}
                                     <p id="price">
                                         {"$" + priceFormat(dt.price.toString())}
                                     </p>
                                     <p id="fdname">{dt.name}</p>
                                     <p id="rating">{dt.rating}</p>
-                                    <button>order now</button>
+                                    <button>
+                                        <BiCartAdd /> <p>Add To Cart</p>
+                                    </button>
                                 </div>
                             </>
                         );
                     })}
                 </div>
-                <div className="offer">
-                    <div className="prt1">
-                        <h1>50% off Big Hamburger </h1>
-                        <div className="timeleft">
-                            <div className="time_card"></div>
-                            <div className="time_card"></div>
-                            <div className="time_card"></div>
-                            <div className="time_card"></div>
+                {offreStatus ? (
+                    <div className="offer">
+                        <div className="prt1">
+                            <h1>
+                                50% off Big
+                                <br />
+                                Hamburger{" "}
+                            </h1>
+                            <div className="timeleft">
+                                <div className="time_card">
+                                    <p>{timeLeft[0]}</p>
+                                    <div className="line"></div>
+                                    <p>Days</p>
+                                </div>
+                                <div className="time_card">
+                                    <p>
+                                        {timeLeft[1].toString().length == 1
+                                            ? "0" + timeLeft[1]
+                                            : timeLeft[1]}
+                                    </p>
+                                    <div className="line"></div>
+                                    <p>Hrs</p>
+                                </div>
+                                <div className="time_card">
+                                    <p>
+                                        {timeLeft[2].toString().length == 1
+                                            ? "0" + timeLeft[2]
+                                            : timeLeft[2]}
+                                    </p>
+                                    <div className="line"></div>
+                                    <p>Mins</p>
+                                </div>
+                                <div className="time_card">
+                                    <p>
+                                        {timeLeft[3].toString().length == 1
+                                            ? "0" + timeLeft[3]
+                                            : timeLeft[3]}
+                                    </p>
+                                    <div className="line"></div>
+                                    <p>Secs</p>
+                                </div>
+                            </div>
+                            <button className="order_now">Order Now</button>
                         </div>
-                        <button>Order Now</button>
+                        <div className="prt2">
+                            <div className="discount">
+                                {MenuData.burgers[0].discount + "%"}
+                            </div>
+                            <img
+                                src={`/Menu/Images/shop/${MenuData.burgers[0].image}`}
+                                alt=""
+                            />
+                        </div>
                     </div>
-                    <div className="prt2">
-                        <div className="discount"></div>
-                        <img src="" alt="" />
-                    </div>
-                </div>
+                ) : null}
                 <div className="prvx">
-                    <img src="" alt="" />
-                    <h1>Transform every meal into a masterpiece</h1>
+                    <img src={ChefImg.src} alt="" />
+                    <h1>
+                        Transform
+                        <br />
+                        every meal into
+                        <br />a masterpiece
+                    </h1>
                 </div>
                 <h3>About</h3>
                 <div className="about">
