@@ -7,6 +7,9 @@ import ChefImg from "../../public/chef.png";
 import { MenuData } from "../../public/Menu/data.js";
 import Pizza from "../../public/Menu/Images/shop/pizza.png";
 import Salad from "../../public/Menu/Images/shop/salad.png";
+import About1Img from "../../public/about1.png";
+import About2Img from "../../public/about2.png";
+import About3Img from "../../public/about3.png";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { BiCartAdd } from "react-icons/bi";
@@ -230,29 +233,33 @@ export default function Home() {
                         <br />a masterpiece
                     </h1>
                 </div>
-                <h3>About</h3>
                 <div className="about">
                     <div className="txtabout">
+                        <h3>About</h3>
                         <h2>Why Freshy?</h2>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
                             industry's standard
                             <br></br>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard
+                            <br></br>
                             <br />
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
                             industry's standard
+                            <br />
+                            <br />
+                            <br></br>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard
                         </p>
-                        <button>Learn More</button>
+                        <button className="order_now">Learn More</button>
                     </div>
                     <div className="imgs_about">
-                        <img src="" alt="" />
-                        <img src="" alt="" />
-                        <img src="" alt="" />
+                        <img src={About1Img.src} alt="" />
+                        <img src={About2Img.src} alt="" />
+                        <img src={About3Img.src} alt="" />
                     </div>
                 </div>
                 <div className="reserve">
