@@ -7,6 +7,7 @@ import ChefImg from "../../public/chef.png";
 import { MenuData } from "../../public/Menu/data.js";
 import Pizza from "../../public/Menu/Images/shop/pizza.png";
 import Salad from "../../public/Menu/Images/shop/salad.png";
+import ReserveSeatImg from "../../public/reserve_seat.png";
 import About1Img from "../../public/about1.png";
 import About2Img from "../../public/about2.png";
 import About3Img from "../../public/about3.png";
@@ -19,7 +20,7 @@ export const themes_text_color = ["#1B1B1B", ""];
 
 export default function Home() {
     const [color_index, setColor_index] = useState(0);
-    const [offreStatus, setOffreStatus] = useState(true);
+    const [offerStatus, setOfferStatus] = useState(true);
     const [timeLeft, setTimeLeft] = useState([6, 23, 59, 59]);
 
     const DecreaseTime = (
@@ -44,7 +45,7 @@ export default function Home() {
                     if (days != 0) {
                         days -= 1;
                     } else {
-                        setOffreStatus(true);
+                        setOfferStatus(true);
                     }
                 }
             }
@@ -63,6 +64,10 @@ export default function Home() {
         // Cleanup interval on component unmount
         return () => clearInterval(interval);
     }, [timeLeft]);
+
+    useEffect(() => {
+        console.log(ReserveSeatImg.src);
+    }, []);
 
     return (
         <div
@@ -169,7 +174,7 @@ export default function Home() {
                         );
                     })}
                 </div>
-                {offreStatus ? (
+                {offerStatus ? (
                     <div className="offer">
                         <div className="prt1">
                             <h1>
@@ -263,13 +268,13 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="reserve">
-                    <img src="" alt="" />
+                    <img src={ReserveSeatImg.src} alt="" />
                     <div>
                         <h2>Reserve Your Seat</h2>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard
+                            Lorem Ipsum is simply dummy text of the printing
+                            <br></br>and typesetting industry. <br></br>Ipsum
+                            has been the industry's standard
                         </p>
                         <div className="book_now">
                             <h2>Book Now</h2>

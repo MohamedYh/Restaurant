@@ -487,3 +487,55 @@ nav h1 {
     height: 45vw;
     max-height: 900px;
 }
+
+.reserve {
+    display: flex;
+    width: 90%;
+}
+.reserve > div {
+    width: fit-content;
+    margin-left: 2vw;
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reserve h2 {
+    font-family: BrownFalco;
+    font-size: 64px;
+}
+.reserve p {
+    font-family: sans;
+    font-size: 24px;
+    font-weight: 500;
+}
+.book_now {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    transition: 500ms;
+    cursor: default;
+}
+
+.book_now:hover {
+    color: #d21200;
+}
+
+.book_now svg {
+    font-size: 70px;
+}
+
+.reserve img {
+    width: 40vw;
+    max-width: 800px;
+    height: 26vw;
+    max-height: 520px;
+}
+
+footer {
+    width: 100%;
+    padding: 2vw;
+    background-color: #ccc1aa;
+    display: flex;
+}       
