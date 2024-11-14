@@ -535,7 +535,19 @@ nav h1 {
 
 footer {
     width: 100%;
-    padding: 2vw;
+    padding: 2vw 6vw;
     background-color: #ccc1aa;
     display: flex;
-}       
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+
+.division {
+    font-family: BrownFalco;
+    font-size: 28px;
+}
+.division p {
+    font-size: 24px;
+    margin-top: 2vh;
+    color: #0000009d;
+}
