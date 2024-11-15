@@ -14,12 +14,16 @@ import About3Img from "../../public/about3.png";
 import "./style.css";
 import { useEffect, useState } from "react";
 import { BiCartAdd } from "react-icons/bi";
+import Navbar from "@/components/navbar";
+import { useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../redux/store";
+import Footer from "@/components/footer";
 
 export const themes_color = ["#EAE5D9", "#2A2A2A"];
-export const themes_text_color = ["#1B1B1B", ""];
+export const themes_text_color = ["#1B1B1B", "white"];
 
 export default function Home() {
-    const [color_index, setColor_index] = useState(0);
+    const theme_index = useSelector((state: RootState) => state.slice.theme);
     const [offerStatus, setOfferStatus] = useState(true);
     const [timeLeft, setTimeLeft] = useState([6, 23, 59, 59]);
 
@@ -72,22 +76,13 @@ export default function Home() {
     return (
         <div
             style={{
-                backgroundColor: themes_color[color_index],
-                color: themes_text_color[color_index],
+                backgroundColor: themes_color[theme_index],
+                color: themes_text_color[theme_index],
             }}
             className="main_container"
         >
             <div className={styles.page + " " + "app"}>
-                <nav>
-                    <h1>Freshy</h1>
-                    <ul>
-                        <li>Home</li>
-                        <li>Menu</li>
-                        <li>Shop</li>
-                        <li>About</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </nav>
+                <Navbar />
                 <h1 className="header1">
                     Finally, the dish you have been<br></br>waiting for on your
                     table
@@ -282,34 +277,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <footer>
-                    <div className="division">
-                        <h2>Contact</h2>
-                        <p>
-                            Contact@freshy.com<br></br>Info@freshy.com
-                        </p>
-                    </div>
-                    <div className="division">
-                        <h2>Drop By</h2>
-                        <p>
-                            St. Downtown, Ottawa, Canada<br></br>001 213 542 689
-                            256
-                        </p>
-                    </div>
-                    <div className="division">
-                        <h2>Follow Us</h2>
-                        <p>
-                            Instagram<br></br>Facebook<br></br>Twitter
-                        </p>
-                    </div>
-                    <div className="division">
-                        <h2>Legal</h2>
-                        <p>
-                            Website by Matay Creative<br></br>©2022. All Rights
-                            Reserved
-                        </p>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         </div>
     );

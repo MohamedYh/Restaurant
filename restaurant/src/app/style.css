@@ -1,68 +1,19 @@
+.main_container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    width: 100vw;
+    height: max-content;
+    background: url("../../public/background.png");
+    background-size: cover;
+}
+
 .app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-image: url("/background.png"); */
-    /* background-size: 100vw; */
     width: 100vw;
     max-width: 2000px;
-}
-
-nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 5.5vh 8vw;
-    justify-content: space-between;
-    font-family: "BrownFalco";
-}
-ul {
-    list-style: none;
-    display: flex;
-    width: 40%;
-    justify-content: space-between;
-    font-size: 24px;
-    align-items: center;
-    font-family: 550;
-}
-
-ul > li:nth-child(5) {
-    background-color: red;
-    padding: 5px 18px;
-    border-radius: 4vw;
-    overflow: hidden;
-    position: relative;
-    transition: 1s;
-    color: white;
-    cursor: pointer;
-    z-index: 1;
-}
-ul > li:nth-child(5)::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: white;
-    transition: 300ms;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-ul > li:nth-child(5):hover::before,
-ul > li:nth-child(5):focus::before {
-    transform: scaleX(1);
-}
-
-ul > li:nth-child(5):hover {
-    color: black;
-}
-
-nav h1 {
-    font-size: 48px;
-    font-family: 450;
 }
 
 .header1 {
@@ -307,6 +258,7 @@ nav h1 {
     width: 100vw;
     padding: 7vh;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 2000px) {
@@ -395,6 +347,7 @@ nav h1 {
 }
 
 .discount {
+    box-sizing: border-box;
     position: absolute;
     left: 0;
     top: 40px;
@@ -423,6 +376,7 @@ nav h1 {
     height: fit-content;
     width: 100%;
     padding: 7vw 5vw;
+    box-sizing: border-box;
 }
 
 .prvx h1 {
@@ -501,6 +455,7 @@ nav h1 {
     justify-content: space-between;
 }
 .reserve h2 {
+    margin-top: 0;
     font-family: BrownFalco;
     font-size: 64px;
 }
@@ -531,23 +486,4 @@ nav h1 {
     max-width: 800px;
     height: 26vw;
     max-height: 520px;
-}
-
-footer {
-    width: 100%;
-    padding: 2vw 6vw;
-    background-color: #ccc1aa;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10vh;
-}
-
-.division {
-    font-family: BrownFalco;
-    font-size: 28px;
-}
-.division p {
-    font-size: 24px;
-    margin-top: 2vh;
-    color: #0000009d;
 }

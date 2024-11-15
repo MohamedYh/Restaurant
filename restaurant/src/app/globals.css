@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&family=Notable&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 @font-face {
     font-family: "Avenir";
     src: local("Avenir"), url("./fonts/AvenirLTStd-Book.otf") format("otf");
@@ -29,31 +31,87 @@ body {
     background-color: #d3d3d3;
     padding: 0;
     height: max-content;
-}
-
-.main_container {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    width: 100vw;
-    height: max-content;
-    background: url("../../public/background.png");
-    background-size: cover;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+nav {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 5.5vh 8vw;
+    justify-content: space-between;
+    font-family: "BrownFalco";
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
+ul {
+    list-style: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    font-size: 24px;
+    align-items: center;
+    font-family: 550;
+}
+
+ul > li:nth-child(5) {
+    background-color: red;
+    padding: 5px 18px;
+    border-radius: 4vw;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+ul > li:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: white;
+    transition: 300ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+ul > li:nth-child(5):hover::before,
+ul > li:nth-child(5):focus::before {
+    transform: scaleX(1);
+}
+
+ul > li:nth-child(5):hover {
+    color: black;
+}
+
+nav h1 {
+    font-size: 48px;
+    font-family: 450;
+}
+
+footer {
+    width: 100%;
+    padding: 2vw 6vw;
+    background-color: #ccc1aa;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-top: 10vh;
+    color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.division {
+    font-family: BrownFalco;
+    font-size: 28px;
+}
+.division p {
+    font-size: 24px;
+    margin-top: 2vh;
+    color: #000000bd;
 }

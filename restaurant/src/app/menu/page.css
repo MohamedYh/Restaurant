@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.menu_main {
+    background: url("../../../public/background.png");
+    background-size: cover;
+    /*  */
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_main > h1 {
+    font-family: Notable;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 140px;
+    margin-top: 100px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+}
