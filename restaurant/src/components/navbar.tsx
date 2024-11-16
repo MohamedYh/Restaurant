@@ -1,16 +1,20 @@
 "use client";
+import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
+    const router = useRouter();
+
     return (
         <nav>
             <h1>Freshy</h1>
             <ul>
-                <li>Home</li>
-                <li>Menu</li>
-                <li>Shop</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li onClick={() => router.push("/")}>Home</li>
+                <li onClick={() => router.push("/menu")}>Menu</li>
+                <li onClick={() => router.push("/shop")}>Shop</li>
+                <li onClick={() => router.push("/about")}>About</li>
+                <li onClick={() => router.push("/contact")}>Contact Us</li>
             </ul>
         </nav>
     );

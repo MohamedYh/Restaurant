@@ -8,19 +8,26 @@ body {
     /*  */
     width: 100vw;
     height: fit-content;
-    min-height: 100vw;
+    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
 }
+.title_container {
+    height: calc(89vh - 135px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.menu_main > h1 {
+.title_container > h1 {
     font-family: Notable;
     font-weight: 400;
     font-style: normal;
     font-size: 140px;
-    margin-top: 100px;
+    margin: 0;
     line-height: 1;
     display: flex;
     justify-content: center;
+    transform: translateY(calc(-5.5vh - 67.5px));
 }

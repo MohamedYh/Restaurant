@@ -88,6 +88,10 @@ ul > li:nth-child(5):hover {
     color: black;
 }
 
+li {
+    cursor: pointer;
+}
+
 nav h1 {
     font-size: 48px;
     font-family: 450;
@@ -102,8 +106,6 @@ footer {
     justify-content: space-between;
     margin-top: 10vh;
     color: black;
-    position: absolute;
-    bottom: 0;
 }
 
 .division {
