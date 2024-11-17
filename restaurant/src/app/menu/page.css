@@ -7,12 +7,20 @@ body {
     background-size: cover;
     /*  */
     width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_main > div {
+    width: 100vw;
+    max-width: 2000px;
     height: fit-content;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
 .title_container {
     height: calc(89vh - 135px);
     display: flex;
@@ -30,4 +38,18 @@ body {
     display: flex;
     justify-content: center;
     transform: translateY(calc(-5.5vh - 67.5px));
+}
+
+.menu_containers_parent {
+    display: flex;
+    width: 100vw;
+    max-width: 2000px;
+    padding: 0 5vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.menu_containers_parent > div {
+    display: flex;
+    flex-direction: column;
 }

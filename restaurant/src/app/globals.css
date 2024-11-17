@@ -99,21 +99,25 @@ nav h1 {
 
 footer {
     width: 100%;
-    padding: 2vw 6vw;
+    padding: 2vw clamp(15px, 6vw, 120px);
     background-color: #ccc1aa;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
     margin-top: 10vh;
     color: black;
+    height: fit-content;
 }
 
 .division {
     font-family: BrownFalco;
-    font-size: 28px;
+    font-size: clamp(18px, 1.75vw, 40px);
+    min-width: clamp(40px, 20vw, 400px);
 }
 .division p {
-    font-size: 24px;
+    font-size: clamp(14px, 1.5vw, 36px);
     margin-top: 2vh;
     color: #000000bd;
+    text-overflow: clip;
+    max-width: 20vw;
 }

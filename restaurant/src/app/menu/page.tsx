@@ -18,13 +18,43 @@ function Menu() {
             }}
             className="menu_main"
         >
-            <Navbar />
-            <div className="title_container">
-                <h1>
-                    MENU<br></br>&nbsp;&nbsp;PAGE
-                </h1>
+            <div>
+                <Navbar />
+                <div className="title_container">
+                    <h1>
+                        MENU<br></br>&nbsp;&nbsp;PAGE
+                    </h1>
+                </div>
+                <div className="menu_containers_parent">
+                    <div className="left_menu_container">
+                        <div className="menu_child"></div>
+                        <div className="menu_child"></div>
+                        <div className="menu_child"></div>
+                        <div className="preview_image">
+                            <img src="" alt="" />
+                        </div>
+                        <div className="menu_child"></div>
+                        <div className="menu_child"></div>
+                    </div>
+                    <div className="right_menu_container">
+                        <div className="preview_image_container">
+                            <img src="" alt="" />
+                        </div>
+                        <div className="preview_image_container">
+                            <img src="" alt="" />
+                        </div>
+                        <div className="preview_image">
+                            <img src="" alt="" />
+                        </div>
+                        <div className="menu_child"></div>
+                        <div className="menu_child"></div>
+                        <div className="preview_image">
+                            <img src="" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     );
 }

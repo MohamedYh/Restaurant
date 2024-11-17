@@ -18,13 +18,15 @@ function Shop() {
             }}
             className="menu_main"
         >
-            <Navbar />
-            <div className="title_container">
-                <h1>
-                    SHOP<br></br>&nbsp;&nbsp;PAGE
-                </h1>
+            <div>
+                <Navbar />
+                <div className="title_container">
+                    <h1>
+                        SHOP<br></br>&nbsp;&nbsp;PAGE
+                    </h1>
+                </div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     );
 }

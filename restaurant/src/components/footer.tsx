@@ -5,9 +5,7 @@ function Footer() {
         <footer>
             <div className="division">
                 <h2>Contact</h2>
-                <p>
-                    Contact@freshy.com<br></br>Info@freshy.com
-                </p>
+                <p>Contact@freshy.com Info@freshy.com</p>
             </div>
             <div className="division">
                 <h2>Drop By</h2>

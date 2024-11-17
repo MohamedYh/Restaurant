@@ -7,12 +7,18 @@ body {
     background-size: cover;
     /*  */
     width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_main > div {
     height: fit-content;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
 .title_container {
     height: calc(89vh - 135px);
     display: flex;
