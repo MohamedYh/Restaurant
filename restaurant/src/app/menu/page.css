@@ -44,7 +44,7 @@ body {
     display: flex;
     width: 100vw;
     max-width: 2000px;
-    padding: 0 5vw;
+    padding: 0 min(5vw, 100px);
     justify-content: space-between;
     box-sizing: border-box;
 }
@@ -52,4 +52,104 @@ body {
 .menu_containers_parent > div {
     display: flex;
     flex-direction: column;
+}
+
+.menu_child {
+    width: 42.5vw;
+    max-width: 850px;
+    background: gray;
+    border-radius: clamp(12px, 1.5vw, 32px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vw;
+    transition: 500ms;
+}
+
+.menu_child:hover {
+    box-shadow: 0 0 0.5vw 3px rgba(255, 255, 255, 0.496);
+}
+
+.menu_child > div {
+    margin: 2vh 0 8vh 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu_child h2 {
+    width: fit-content;
+    font-size: clamp(28px, 10vw, 84px);
+    margin-top: 3vh;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: "Bad Script";
+    color: #f9b807;
+}
+.menu_child > div > div {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_child > div > div > p:first-child {
+    font-size: 30px;
+    margin: clamp(7px, 1.5vh, 20px) 0;
+    font-family: "Bad Script";
+    color: white;
+}
+
+.menu_child > div > div > p:last-child {
+    font-size: 27px;
+    margin: clamp(7px, 1vh, 20px) 0;
+    font-family: "Advent Pro";
+    display: flex;
+    color: #f0c54e;
+    align-items: center;
+    font-weight: 500;
+}
+
+#pizza {
+    background-image: url("../../../public/Menu/Images/pizza_bck.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#burgers {
+    background-image: url("../../../public/Menu/Images/burgers_bck.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#sandwiches {
+    background-image: url("../../../public/Menu/Images/sandwiches_bck.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#juices {
+    background-image: url("../../../public/Menu/Images/juices_bck.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#desserts {
+    background-image: url("../../../public/Menu/Images/desserts_bck.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#salads {
+    background-image: url("../../../public/Menu/Images/salads_bck.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+#french_fries {
+    background-image: url("../../../public/Menu/Images/french_fries_bck.jpeg");
+    background-size: cover;
+    background-blend-mode: multiply;
 }
