@@ -7,6 +7,12 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { themes_color, themes_text_color } from "../page";
 import { MenuData } from "../../../public/Menu/data";
+import BurgerPrv from "../../../public/Menu/Images/burgers_prv.jpg";
+import PizzPrv from "../../../public/Menu/Images/pizza_prv.jpg";
+import DessertPrv from "../../../public/Menu/Images/desserts_prv.jpg";
+import SaladsPrv from "../../../public/Menu/Images/salads_prv.png";
+import SandwichPrv from "../../../public/Menu/Images/sandwiches_prv.png";
+import Delivery from "@/components/delivery";
 
 function Menu() {
     const theme_index = useSelector((state: RootState) => state.slice.theme);
@@ -43,7 +49,7 @@ function Menu() {
                             </div>
                         </div>
                         <div className="preview_image">
-                            <img src="" alt="" />
+                            <img src={PizzPrv.src} alt="" />
                         </div>
                         <div id="sandwiches" className="menu_child">
                             <h2>Sandwiches</h2>
@@ -59,7 +65,7 @@ function Menu() {
                             </div>
                         </div>
                         <div className="preview_image">
-                            <img src="" alt="" />
+                            <img src={SaladsPrv.src} alt="" />
                         </div>
                         <div id="juices" className="menu_child">
                             <h2>Juices</h2>
@@ -89,8 +95,8 @@ function Menu() {
                         </div>
                     </div>
                     <div className="right_menu_container">
-                        <div className="preview_image_container">
-                            <img src="" alt="" />
+                        <div className="preview_image">
+                            <img src={BurgerPrv.src} alt="" />
                         </div>
                         <div id="burgers" className="menu_child">
                             <h2>Burgers</h2>
@@ -106,7 +112,7 @@ function Menu() {
                             </div>
                         </div>
                         <div className="preview_image">
-                            <img src="" alt="" />
+                            <img src={SandwichPrv.src} alt="" />
                         </div>
                         <div id="salads" className="menu_child">
                             <h2>Salads</h2>
@@ -135,10 +141,11 @@ function Menu() {
                             </div>
                         </div>
                         <div className="preview_image">
-                            <img src="" alt="" />
+                            <img src={DessertPrv.src} alt="" />
                         </div>
                     </div>
                 </div>
+                <Delivery />
                 <Footer />
             </div>
         </div>

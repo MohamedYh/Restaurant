@@ -1,0 +1,8 @@
+.delivery_container {
+    background-image: url("../../public/delivery_bck.png");
+    background-size: cover;
+    display: flex;
+    padding: 2vh min(3vw, 60px);
+    justify-content: space-between;
+    align-items: center;
+}

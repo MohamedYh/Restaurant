@@ -55,7 +55,7 @@ body {
 }
 
 .menu_child {
-    width: 42.5vw;
+    width: 43.5vw;
     max-width: 850px;
     background: gray;
     border-radius: clamp(12px, 1.5vw, 32px);
@@ -63,7 +63,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vw;
+    margin-bottom: min(3vw, 60px);
     transition: 500ms;
 }
 
@@ -152,4 +152,18 @@ body {
     background-image: url("../../../public/Menu/Images/french_fries_bck.jpeg");
     background-size: cover;
     background-blend-mode: multiply;
+}
+
+.preview_image {
+    overflow: hidden;
+    border-radius: clamp(12px, 1.5vw, 32px);
+    width: 43.5vw;
+    max-width: 850px;
+    height: fit-content;
+    margin-bottom: min(3vw, 60px);
+}
+.preview_image img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-size: cover;
 }
