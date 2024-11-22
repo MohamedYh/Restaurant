@@ -150,7 +150,7 @@ export const MenuData = {
             name: "Cobb Salad",
             price: 30.5,
             rating: 5,
-            images: "salad.png",
+            image: "salad.png",
             discount: "No",
         },
         {
@@ -196,7 +196,7 @@ export const MenuData = {
             name: "Original Salted Fries",
             price: 12.25,
             rating: 5,
-            images: "french_fries.png",
+            image: "french_fries.png",
             discount: "No",
         },
         {
@@ -240,7 +240,7 @@ export const MenuData = {
             name: "Tiramisu",
             price: 7.99,
             rating: 5,
-            images: "dessert.png",
+            image: "dessert.png",
             discount: "No",
         },
         {

@@ -7,7 +7,7 @@ function Navbar() {
     const router = useRouter();
 
     return (
-        <nav>
+        <nav className="main_navbar">
             <h1>Freshy</h1>
             <ul>
                 <li onClick={() => router.push("/")}>Home</li>

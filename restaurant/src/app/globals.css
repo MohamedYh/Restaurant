@@ -37,7 +37,7 @@ body {
     margin: 0;
 }
 
-nav {
+.main_navbar {
     width: 100%;
     display: flex;
     box-sizing: border-box;
@@ -47,7 +47,7 @@ nav {
     font-family: "BrownFalco";
 }
 
-ul {
+.main_navbar ul {
     list-style: none;
     display: flex;
     width: 40%;
@@ -57,7 +57,7 @@ ul {
     font-family: 550;
 }
 
-ul > li:nth-child(5) {
+.main_navbar ul > li:nth-child(5) {
     background-color: red;
     padding: 5px 18px;
     border-radius: 4vw;
@@ -68,7 +68,7 @@ ul > li:nth-child(5) {
     cursor: pointer;
     z-index: 1;
 }
-ul > li:nth-child(5)::before {
+.main_navbar ul > li:nth-child(5)::before {
     content: "";
     position: absolute;
     left: 0;
@@ -82,20 +82,20 @@ ul > li:nth-child(5)::before {
     transform-origin: left;
 }
 
-ul > li:nth-child(5):hover::before,
-ul > li:nth-child(5):focus::before {
+.main_navbar ul > li:nth-child(5):hover::before,
+.main_navbar ul > li:nth-child(5):focus::before {
     transform: scaleX(1);
 }
 
-ul > li:nth-child(5):hover {
+.main_navbar ul > li:nth-child(5):hover {
     color: black;
 }
 
-li {
+.main_navbar li {
     cursor: pointer;
 }
 
-nav h1 {
+.main_navbar h1 {
     font-size: 48px;
     font-family: 450;
 }
@@ -107,7 +107,7 @@ footer {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
-    margin-top: 10vh;
+    margin-top: 5vh;
     color: black;
     height: fit-content;
 }

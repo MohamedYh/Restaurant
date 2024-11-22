@@ -8,6 +8,8 @@ import { MenuData } from "../../public/Menu/data.js";
 import Pizza from "../../public/Menu/Images/shop/pizza.png";
 import Salad from "../../public/Menu/Images/shop/salad.png";
 import ReserveSeatImg from "../../public/reserve_seat.png";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap/dist/css/bootstrap.min.css";
 import About1Img from "../../public/about1.png";
 import About2Img from "../../public/about2.png";
 import About3Img from "../../public/about3.png";
@@ -18,6 +20,7 @@ import Navbar from "@/components/navbar";
 import { useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../redux/store";
 import Footer from "@/components/footer";
+import { priceFormat } from "@/global_functions";
 
 export const themes_color = ["#EAE5D9", "#2A2A2A"];
 export const themes_text_color = ["#1B1B1B", "white"];
@@ -128,15 +131,6 @@ export default function Home() {
                             case 4:
                                 dt = MenuData.burgers[3];
                                 break;
-                        }
-
-                        function priceFormat(s: string) {
-                            const dotIndex = s.indexOf(".");
-                            var afterDot = s.slice(dotIndex);
-                            if (afterDot.length == 2) {
-                                afterDot += "0";
-                            }
-                            return s.slice(0, dotIndex) + afterDot;
                         }
 
                         return (
