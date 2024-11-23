@@ -258,13 +258,6 @@ export const MenuData = {
             discount: "No",
         },
         {
-            name: "Fruit Tart",
-            price: 15.5,
-            rating: 4.2,
-            image: "dessert.png",
-            discount: "No",
-        },
-        {
             name: "Cheesecake",
             price: 5.5,
             rating: 4.3,

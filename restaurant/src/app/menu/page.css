@@ -22,7 +22,7 @@ body {
 }
 
 .title_container {
-    height: calc(89vh - 135px);
+    height: calc(100vh - 135px);
     display: flex;
     align-items: center;
     justify-content: center;

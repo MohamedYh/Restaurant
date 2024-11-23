@@ -101,7 +101,7 @@ const Pagination: React.FC<PaginationProps> = ({
     };
 
     return (
-        <nav aria-label="Page navigation">
+        <nav className="mt-3 mb-5" aria-label="Page navigation">
             <ul className="pagination justify-content-center">
                 <li
                     className={`page-item ${

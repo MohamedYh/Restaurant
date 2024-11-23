@@ -24,7 +24,7 @@ interface MealObjectInterface {
 function Shop() {
     const theme_index = useSelector((state: RootState) => state.slice.theme);
     const keysAr: Array<string> = Object.keys(MenuData);
-    const [section, setSection] = useState(2);
+    const [section, setSection] = useState(1);
     const meals_list: Array<any> = keysAr.map((v, i) => {
         return MenuData[v as keyof Object];
     });
@@ -60,7 +60,11 @@ function Shop() {
                         )
                         .map((x, i) => {
                             return (
-                                <div className="fdbox">
+                                <div
+                                    className={`fdbox ${
+                                        x.discount !== "No" && "dsc"
+                                    }`}
+                                >
                                     <img src={`/Menu/Images/shop/${x.image}`} />
                                     {x.discount != "No" && (
                                         <div className="disc">
