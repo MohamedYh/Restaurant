@@ -11,7 +11,7 @@ function Footer() {
             <div className="division">
                 <h2>Drop By</h2>
                 <p>
-                    St. Downtown, Ottawa, Canada<br></br>001 213 542 689 256
+                    St. Downtown, Marrakesh, Morocco<br></br>001 213 542 689 256
                 </p>
             </div>
             <div className="division">
