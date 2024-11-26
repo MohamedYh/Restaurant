@@ -35,3 +35,81 @@
     justify-content: center;
     transform: translateY(calc(-5.5vh - 67.5px));
 }
+
+.history {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 min(11vw, 300px);
+    margin: 0 0 12vh 0;
+}
+
+.history h1 {
+    font-family: "Petit Formal Script";
+    font-size: clamp(48px, 5vw, 102px);
+}
+
+.history p {
+    font-family: "Bad Script";
+    font-size: clamp(28px, 2.5vw, 52px);
+    text-align: center;
+    line-height: 2;
+    margin-top: 2vh;
+}
+
+.highlighted {
+    margin: 0;
+    display: inline-block;
+    color: #ffae00;
+}
+
+.about {
+    display: flex;
+    padding: 1vh 6vw;
+}
+.txtabout {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    font-family: Rubik;
+    margin-right: 10vw;
+}
+.txtabout h3 {
+    color: #e69d00;
+    font-family: Lexend;
+    font-weight: 500;
+    font-size: 36px;
+}
+.txtabout h2 {
+    font-family: "BrownFalco";
+    font-size: 46px;
+    margin-top: 2vh;
+}
+.txtabout p {
+    font-size: 28px;
+    margin-top: 5vh;
+    width: 90%;
+}
+.imgs_about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.imgs_about img {
+    width: 16vw;
+    max-width: 320px;
+    margin: min(1vw, 20px);
+}
+
+.txtabout button {
+    width: fit-content;
+}
+
+.imgs_about {
+    height: 45vw;
+    max-height: 900px;
+}
