@@ -33,7 +33,7 @@
     line-height: 1;
     display: flex;
     justify-content: center;
-    transform: translateY(calc(-5.5vh - 67.5px));
+    transform: translateX(calc(-5.5vh - 67.5px));
 }
 
 .history {
@@ -112,4 +112,46 @@
 .imgs_about {
     height: 45vw;
     max-height: 900px;
+}
+
+.comments_container h1 {
+    font-family: "Petit Formal Script";
+    font-size: clamp(48px, 5vw, 102px);
+}
+h1 {
+}
+.comments_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.comment {
+    width: min(65vw, 1300px);
+    padding: min(4.5vw, 90px);
+    background: radial-gradient(circle farthest-side, #9d0000, #370000);
+    border-radius: 8px;
+    position: relative;
+    margin-top: 6vh;
+    margin-right: 5vw;
+}
+.comment p {
+    font-family: "Bad Script";
+    font-size: clamp(16px, 1.75vw, 32px);
+}
+.comment > span {
+    position: absolute;
+    right: min(4.5vw, 90px);
+}
+
+.p_slider {
+    width: min(65vw, 1300px);
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    transition: 1s;
 }
