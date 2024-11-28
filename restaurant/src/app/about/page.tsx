@@ -5,6 +5,9 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import StarIcon from "@mui/icons-material/Star";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import Chef1 from "../../../public/chef1.png";
+import Chef2 from "../../../public/chef2.png";
+import Chef3 from "../../../public/chef3.png";
 import { useSelector } from "react-redux";
 import About1Img from "../../../public/about1.png";
 import About2Img from "../../../public/about2.png";
@@ -51,9 +54,9 @@ function About() {
                 console.log(commentIndex, comments.length);
                 if (commentIndex != comments.length - 1) {
                     slider.current.style.transition = `1s`;
-                    slider.current.style.transform = `translateX(-${
+                    slider.current.style.transform = `translateX(max(-${
                         70 * (commentIndex + 1)
-                    }vw)`;
+                    }vw,-${1400 * (commentIndex + 1)}px))`;
                     setCommentIndex(commentIndex + 1);
                 } else {
                     slider.current.style.transition = `0s`;
@@ -122,6 +125,53 @@ function About() {
                         <img src={About3Img.src} alt="" />
                     </div>
                 </div>
+                <div className="chefs_container">
+                    <h1>Chefs</h1>
+                    <div className="chefs_list">
+                        <div className="chef">
+                            <img src={Chef1.src} alt="" />
+                            <div>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard
+                                </p>
+                                <div>
+                                    <div className="horz_line"></div>
+                                    <p>Steve Smith, Director Of Venus</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="chef">
+                            <img src={Chef2.src} alt="" />
+                            <div>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard
+                                </p>
+                                <div>
+                                    <div className="horz_line"></div>
+                                    <p>Monica Jen, Manager Of Venus</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="chef">
+                            <img src={Chef3.src} alt="" />
+                            <div>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the
+                                    printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard
+                                </p>
+                                <div>
+                                    <div className="horz_line"></div>
+                                    <p>Jack Jonal, Developer Of Venus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="comments_container">
                     <h1>Client's Comments</h1>
                     <div className="p_slider">
@@ -142,6 +192,7 @@ function About() {
                         </div>
                     </div>
                 </div>
+
                 <Footer />
             </div>
         </div>
