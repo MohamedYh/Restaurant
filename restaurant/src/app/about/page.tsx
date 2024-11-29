@@ -8,6 +8,7 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import Chef1 from "../../../public/chef1.png";
 import Chef2 from "../../../public/chef2.png";
 import Chef3 from "../../../public/chef3.png";
+import ReserveSeatImg from "../../../public/reserve_seat.png";
 import { useSelector } from "react-redux";
 import About1Img from "../../../public/about1.png";
 import About2Img from "../../../public/about2.png";
@@ -24,6 +25,7 @@ import Delivery from "@/components/delivery";
 import { Pagination, Rating } from "@mui/material";
 import PaginationCmp from "@/components/pagination";
 import { GoogleMap, Marker } from "@react-google-maps/api";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 interface MealObjectInterface {
     name: string;
@@ -192,7 +194,21 @@ function About() {
                         </div>
                     </div>
                 </div>
-
+                <div className="reserve">
+                    <img src={ReserveSeatImg.src} alt="" />
+                    <div>
+                        <h2>Reserve Your Seat</h2>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing
+                            <br></br>and typesetting industry. <br></br>Ipsum
+                            has been the industry's standard
+                        </p>
+                        <div className="book_now">
+                            <h2>Book Now</h2>
+                            <HiArrowLongRight />
+                        </div>
+                    </div>
+                </div>
                 <Footer />
             </div>
         </div>
