@@ -5,7 +5,7 @@ interface StateInterface {
 }
 
 const initialState: StateInterface = {
-    theme: 1,
+    theme: 0,
 };
 
 const Slice = createSlice({

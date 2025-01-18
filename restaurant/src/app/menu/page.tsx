@@ -20,8 +20,8 @@ function Menu() {
     return (
         <div
             style={{
-                backgroundColor: themes_color[1],
-                color: themes_text_color[1],
+                backgroundColor: themes_color[theme_index],
+                color: themes_text_color[theme_index],
             }}
             className="menu_main"
         >
