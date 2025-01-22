@@ -8,20 +8,21 @@
 
 @font-face {
     font-family: "Avenir";
-    src: local("Avenir"), url("./fonts/AvenirLTStd-Book.otf") format("otf");
+    src: local("Avenir"), url("../../public/fonts/AvenirLTStd-Book.otf") format("otf");
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: "BrownFalco";
-    src: local("BrownFalco"), url("./fonts/Brown_Falco.otf") format("otf");
+    src: local("BrownFalco"), url("/fonts/Brown_Falco.otf") format("otf");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Avenir Heavy";
-    src: url("fonts/AvenirLTStd-Heavy.otf");
+    src: url("../../public/fonts/AvenirLTStd-Heavy.otf");
     font-weight: normal;
     font-style: normal;
 }
@@ -56,8 +57,28 @@ body {
     justify-content: space-between;
     font-size: 24px;
     align-items: center;
-    font-family: 550;
+    font-family: 'sans-serif';
 }
+
+/*::-webkit-scrollbar {*/
+/*    width: 6px;*/
+/*}*/
+
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*    border-radius: 200px;*/
+/*}*/
+
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*}*/
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
 
 .main_navbar ul > li:nth-child(5) {
     background-color: red;
@@ -70,6 +91,7 @@ body {
     cursor: pointer;
     z-index: 1;
 }
+
 .main_navbar ul > li:nth-child(5)::before {
     content: "";
     position: absolute;
@@ -99,18 +121,22 @@ body {
 
 .main_navbar h1 {
     font-size: 48px;
-    font-family: 450;
+    font-family: "BrownFalco";
+
 }
 
 .theme_container {
     position: absolute;
-    right: -45px;
-    top: -45px;
-    width: 100px;
-    height: 100px;
+    right: 0;
+    top: 0;
+    width: 67px;
+    height: 57px;
     border-radius: 50%;
     transition: 500ms;
     cursor: pointer;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .theme_container:hover {
@@ -156,6 +182,7 @@ footer {
     font-size: clamp(18px, 1.75vw, 40px);
     min-width: clamp(40px, 20vw, 400px);
 }
+
 .division p {
     font-size: clamp(14px, 1.5vw, 36px);
     margin-top: 2vh;
@@ -175,6 +202,7 @@ footer {
     display: inline;
     color: #820c0c;
 }
+
 .delivery_container img {
     width: min(40vw, 800px);
 }
