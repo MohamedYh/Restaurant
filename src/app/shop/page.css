@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+}
+
+.shop_main {
+    background: url("../../../public/background.png");
+    background-size: cover;
+    /*  */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.shop_main > div {
+    height: fit-content;
+    width: 100vw;
+    max-width: 2000px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.title_container {
+    height: calc(100vh - 135px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_container > h1 {
+    font-family: Notable;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    margin: 0;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    transform: translateY(calc(-5.5vh - 67.5px));
+}
+
+.meals_container {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    flex-wrap: wrap;
+}
+
+.section_index {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+}
+.index {
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 13px;
+    font-size: clamp(28px, 2vw, 52px);
+    transition: 500ms;
+    font-family: "Lexend";
+    min-width: 29px;
+    margin: 0 16px;
+    cursor: pointer;
+}
+.index:hover {
+    background: #fa2929;
+}
+
+#paganiation {
+    font-size: clamp(28px, 2vw, 52px);
+}

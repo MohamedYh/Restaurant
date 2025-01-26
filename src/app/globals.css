@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Bad+Script&family=Faster+One&family=Lalezar&family=Lexend:wght@100..900&family=Notable&family=Petit+Formal+Script&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Bad+Script&family=Faster+One&family=Lalezar&family=Lexend:wght@100..900&family=Notable&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Bad+Script&family=Lalezar&family=Lexend:wght@100..900&family=Notable&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Lalezar&family=Lexend:wght@100..900&family=Notable&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&family=Notable&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lexend:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@font-face {
+    font-family: "Avenir";
+    src: local("Avenir"), url("../../public/fonts/AvenirLTStd-Book.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BrownFalco";
+    src: local("BrownFalco"), url("../../public/fonts/Brown_Falco.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Heavy";
+    src: url("../../public/fonts/AvenirLTStd-Heavy.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #d3d3d3;
+    padding: 0;
+    height: max-content;
+    margin: 0;
+}
+
+.main_navbar {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 5.5vh 8vw;
+    justify-content: space-between;
+    font-family: "BrownFalco";
+}
+
+.main_navbar ul {
+    list-style: none;
+    display: flex;
+    width: 40%;
+    min-width: 475px;
+    justify-content: space-between;
+    font-size: 24px;
+    align-items: center;
+    font-family: 'sans-serif';
+}
+
+/*::-webkit-scrollbar {*/
+/*    width: 6px;*/
+/*}*/
+
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*    border-radius: 200px;*/
+/*}*/
+
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*}*/
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
+
+.main_navbar ul > li:nth-child(5) {
+    background-color: red;
+    padding: 5px 18px;
+    border-radius: 4vw;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.main_navbar ul > li:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: white;
+    transition: 300ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.main_navbar ul > li:nth-child(5):hover::before,
+.main_navbar ul > li:nth-child(5):focus::before {
+    transform: scaleX(1);
+}
+
+.main_navbar ul > li:nth-child(5):hover {
+    color: black;
+}
+
+.main_navbar li {
+    cursor: pointer;
+    font-family: "sans-serif";
+}
+
+.main_navbar h1 {
+    font-size: 48px;
+    font-family: "BrownFalco";
+    margin: 0;
+}
+
+.theme_container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 67px;
+    height: 57px;
+    border-radius: 50%;
+    transition: 500ms;
+    cursor: pointer;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.theme_container:hover {
+    box-shadow: 0 0 21px 3px #737373;
+}
+
+.theme_container > svg:active {
+    animation-name: rotate360;
+    animation-duration: 1s;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.theme_container > svg {
+    position: absolute;
+    bottom: 17px;
+    font-size: 35px;
+    left: 18px;
+    transition: 500ms;
+}
+
+footer {
+    width: 100%;
+    padding: 2vw clamp(15px, 6vw, 120px);
+    background-color: #ccc1aa;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-top: 5vh;
+    color: black;
+    height: fit-content;
+}
+
+.division {
+    font-family: BrownFalco;
+    font-size: clamp(18px, 1.75vw, 40px);
+    min-width: clamp(40px, 20vw, 400px);
+}
+
+.division p {
+    font-size: clamp(14px, 1.5vw, 36px);
+    margin-top: 2vh;
+    color: #000000bd;
+    text-overflow: clip;
+    max-width: 20vw;
+}
+
+.delivery_container p {
+    font-family: "Faster One";
+    font-size: min(71px, 5.5vw);
+    width: min(45vw, 900px);
+    margin: 0;
+}
+
+.delivery_container > p > p {
+    display: inline;
+    color: #820c0c;
+}
+
+.delivery_container img {
+    width: min(40vw, 800px);
+}
