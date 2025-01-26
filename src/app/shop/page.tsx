@@ -66,7 +66,7 @@ function Shop() {
                                         x.discount !== "No" && "dsc"
                                     }`}
                                 >
-                                    <img src={`/Menu/Images/shop/${x.image}`} />
+                                    <img src={`../../../public/Menu/Images/shop/${x.image}`} />
                                     {x.discount != "No" && (
                                         <div className="disc">
                                             {x.discount + "%"}

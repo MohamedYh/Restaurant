@@ -170,7 +170,7 @@ footer {
     width: 100%;
     padding: 2vw clamp(15px, 6vw, 120px);
     background-color: #ccc1aa;
-    display: flex;
+    display: flex !important;
     box-sizing: border-box;
     justify-content: space-between;
     margin-top: 5vh;
@@ -181,7 +181,7 @@ footer {
 .division {
     font-family: BrownFalco;
     font-size: clamp(18px, 1.75vw, 40px);
-    min-width: clamp(40px, 20vw, 400px);
+    flex: 1;
 }
 
 .division p {

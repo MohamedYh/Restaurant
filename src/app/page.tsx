@@ -139,7 +139,7 @@ export default function Home() {
                                 }
                             >
                                 <img
-                                    src={`/Menu/Images/shop/${dt.image}`}
+                                    src={`../../public/Menu/Images/shop/${dt.image}`}
                                 />
                                 {dt.discount != "No" && (
                                     <div className="disc">
