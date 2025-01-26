@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { themes_color, themes_text_color } from "../page";
+import { themes_color, themes_text_color } from "@/generalData";
 import { MenuData } from "../../../public/Menu/data";
 import BurgerPrv from "../../../public/Menu/Images/burgers_prv.jpg";
 import PizzPrv from "../../../public/Menu/Images/pizza_prv.jpg";
@@ -39,7 +39,7 @@ function Menu() {
                             <div>
                                 {MenuData.pizza.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>
@@ -56,7 +56,7 @@ function Menu() {
                             <div>
                                 {MenuData.sandwiches.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>
@@ -72,7 +72,7 @@ function Menu() {
                             <div>
                                 {MenuData.juices.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>
@@ -85,7 +85,7 @@ function Menu() {
                             <div>
                                 {MenuData.desserts.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>
@@ -103,7 +103,7 @@ function Menu() {
                             <div>
                                 {MenuData.burgers.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>
@@ -119,7 +119,7 @@ function Menu() {
                             <div>
                                 {MenuData.salads.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>
@@ -132,7 +132,7 @@ function Menu() {
                             <div>
                                 {MenuData.french_fries.map((v, i) => {
                                     return (
-                                        <div>
+                                        <div key={i}>
                                             <p>{v.name}</p>
                                             <p>${v.price}</p>
                                         </div>

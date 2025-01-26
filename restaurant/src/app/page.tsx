@@ -1,29 +1,25 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
-import { HiArrowLongRight } from "react-icons/hi2";
+import {HiArrowLongRight} from "react-icons/hi2";
 import Burger from "../../public/Menu/Images/shop/burger.png";
 import ChefImg from "../../public/chef.png";
-import { MenuData } from "../../public/Menu/data.js";
+import {MenuData} from "../../public/Menu/data.js";
 import Pizza from "../../public/Menu/Images/shop/pizza.png";
 import Salad from "../../public/Menu/Images/shop/salad.png";
 import ReserveSeatImg from "../../public/reserve_seat.png";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import "bootstrap/dist/css/bootstrap.min.css";
 import About1Img from "../../public/about1.png";
 import About2Img from "../../public/about2.png";
+import {themes_color, themes_text_color} from "@/generalData";
 import About3Img from "../../public/about3.png";
 import "./style.css";
-import { useEffect, useState } from "react";
-import { BiCartAdd } from "react-icons/bi";
+import {useEffect, useState} from "react";
+import {BiCartAdd} from "react-icons/bi";
 import Navbar from "@/components/navbar";
-import { useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../redux/store";
+import {useSelector} from "react-redux";
+import {RootState, AppDispatch} from "../redux/store";
 import Footer from "@/components/footer";
-import { priceFormat } from "@/global_functions";
+import {priceFormat} from "@/global_functions";
 
-export const themes_color = ["#EAE5D9", "#2A2A2A"];
-export const themes_text_color = ["#1B1B1B", "white"];
 
 export default function Home() {
     const theme_index = useSelector((state: RootState) => state.slice.theme);
@@ -85,7 +81,7 @@ export default function Home() {
             className="main_container"
         >
             <div className={styles.page + " " + "app"}>
-                <Navbar />
+                <Navbar/>
                 <h1 className="header1">
                     Finally, the dish you have been<br></br>waiting for on your
                     table
@@ -93,16 +89,16 @@ export default function Home() {
                 <p className="paragraph1">
                     In publishing and graphic design, Lorem ipsum is a
                     placeholder text
-                    <br />
+                    <br/>
                     commonly used to demonstrate the visual form of a document{" "}
                 </p>
                 <button className="order_now">Order Now</button>
                 <div className="top3">
-                    <img src={Burger.src} alt="food" />
+                    <img src={Burger.src} alt="food"/>
                     <div className="main_image_container">
-                        <img src={Pizza.src} alt="food" />
+                        <img src={Pizza.src} alt="food"/>
                     </div>
-                    <img src={Salad.src} alt="food" />
+                    <img src={Salad.src} alt="food"/>
                 </div>
                 <h1 className="header1">Top List Is Back</h1>
                 <p className="paragraph2">
@@ -134,32 +130,31 @@ export default function Home() {
                         }
 
                         return (
-                            <>
-                                <div
-                                    className={
-                                        dt.discount != "No"
-                                            ? `fdbox dsc`
-                                            : "fdbox"
-                                    }
-                                >
-                                    <img
-                                        src={`/Menu/Images/shop/${dt.image}`}
-                                    />
-                                    {dt.discount != "No" && (
-                                        <div className="disc">
-                                            {dt.discount + "%"}
-                                        </div>
-                                    )}
-                                    <p id="price">
-                                        {"$" + priceFormat(dt.price.toString())}
-                                    </p>
-                                    <p id="fdname">{dt.name}</p>
-                                    <p id="rating">{dt.rating}</p>
-                                    <button>
-                                        <BiCartAdd /> <p>Add To Cart</p>
-                                    </button>
-                                </div>
-                            </>
+                            <div
+                                key={i}
+                                className={
+                                    dt.discount != "No"
+                                        ? `fdbox dsc`
+                                        : "fdbox"
+                                }
+                            >
+                                <img
+                                    src={`/Menu/Images/shop/${dt.image}`}
+                                />
+                                {dt.discount != "No" && (
+                                    <div className="disc">
+                                        {dt.discount + "%"}
+                                    </div>
+                                )}
+                                <p id="price">
+                                    {"$" + priceFormat(dt.price.toString())}
+                                </p>
+                                <p id="fdname">{dt.name}</p>
+                                <p id="rating">{dt.rating}</p>
+                                <button>
+                                    <BiCartAdd/> <p>Add To Cart</p>
+                                </button>
+                            </div>
                         );
                     })}
                 </div>
@@ -168,7 +163,7 @@ export default function Home() {
                         <div className="prt1">
                             <h1>
                                 50% off Big
-                                <br />
+                                <br/>
                                 Hamburger{" "}
                             </h1>
                             <div className="timeleft">
@@ -219,12 +214,12 @@ export default function Home() {
                     </div>
                 ) : null}
                 <div className="prvx">
-                    <img src={ChefImg.src} alt="" />
+                    <img src={ChefImg.src} alt=""/>
                     <h1>
                         Transform
-                        <br />
+                        <br/>
                         every meal into
-                        <br />a masterpiece
+                        <br/>a masterpiece
                     </h1>
                 </div>
                 <div className="about">
@@ -237,12 +232,12 @@ export default function Home() {
                             industry's standard
                             <br></br>
                             <br></br>
-                            <br />
+                            <br/>
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
                             industry's standard
-                            <br />
-                            <br />
+                            <br/>
+                            <br/>
                             <br></br>
                             Lorem Ipsum is simply dummy text of the printing and
                             typesetting industry. Lorem Ipsum has been the
@@ -251,13 +246,13 @@ export default function Home() {
                         <button className="order_now">Learn More</button>
                     </div>
                     <div className="imgs_about">
-                        <img src={About1Img.src} alt="" />
-                        <img src={About2Img.src} alt="" />
-                        <img src={About3Img.src} alt="" />
+                        <img src={About1Img.src} alt=""/>
+                        <img src={About2Img.src} alt=""/>
+                        <img src={About3Img.src} alt=""/>
                     </div>
                 </div>
                 <div className="reserve">
-                    <img src={ReserveSeatImg.src} alt="" />
+                    <img src={ReserveSeatImg.src} alt=""/>
                     <div>
                         <h2>Reserve Your Seat</h2>
                         <p>
@@ -265,13 +260,13 @@ export default function Home() {
                             <br></br>and typesetting industry. <br></br>Ipsum
                             has been the industry's standard
                         </p>
-                        <div className="book_now">
+                        <div className="boo`k_now">
                             <h2>Book Now</h2>
-                            <HiArrowLongRight />
+                            <HiArrowLongRight/>
                         </div>
                     </div>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
         </div>
     );

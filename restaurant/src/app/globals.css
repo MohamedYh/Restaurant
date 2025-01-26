@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: "BrownFalco";
-    src: local("BrownFalco"), url("/fonts/Brown_Falco.otf") format("otf");
+    src: local("BrownFalco"), url("../../public/fonts/Brown_Falco.otf") format("otf");
     font-weight: normal;
     font-style: normal;
 }
@@ -117,12 +117,13 @@ body {
 
 .main_navbar li {
     cursor: pointer;
+    font-family: "sans-serif";
 }
 
 .main_navbar h1 {
     font-size: 48px;
     font-family: "BrownFalco";
-
+    margin: 0;
 }
 
 .theme_container {

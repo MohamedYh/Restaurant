@@ -1,5 +1,5 @@
 import React from "react";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import {MdArrowBackIos, MdArrowForwardIos} from "react-icons/md";
 
 interface PaginationProps {
     currentPage: number;
@@ -8,10 +8,10 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({
-    currentPage,
-    totalPages,
-    onPageChange,
-}) => {
+                                                   currentPage,
+                                                   totalPages,
+                                                   onPageChange,
+                                               }) => {
     const handlePageClick = (page: number) => {
         if (page !== currentPage) onPageChange(page);
     };
@@ -45,12 +45,38 @@ const Pagination: React.FC<PaginationProps> = ({
         return pages;
     };
 
+
     const renderPageNumbers = () => {
+        const PaginationButtonStyle = (page: Number) => {
+            return {
+                width: "50px",
+                height:
+                    "50px",
+                display:
+                    "flex",
+                justifyContent:
+                    "center",
+                alignItems:
+                    "center",
+                backgroundColor:
+                    page === currentPage ? "red" : "transparent",
+                color:
+                    "white",
+                fontSize:
+                    "1.25rem",
+                fontWeight:
+                    "500",
+                transition:
+                    "background-color 0.3s, color 0.3s",
+                borderRadius:
+                    '50%'
+            }
+        }
         const visiblePages = getVisiblePages();
         return visiblePages.map((page, index) =>
             page === -1 ? (
                 <li
-                    style={{ display: "flex", alignItems: "center" }}
+                    style={{display: "flex", alignItems: "center"}}
                     key={`ellipsis-${index}`}
                     className="page-item disabled"
                 >
@@ -69,19 +95,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 <li key={page} className="page-item">
                     <button
                         className={`page-link rounded-pill mx-1 border-0`}
-                        style={{
-                            width: "50px",
-                            height: "50px",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            backgroundColor:
-                                page === currentPage ? "red" : "transparent",
-                            color: "white",
-                            fontSize: "1.25rem",
-                            fontWeight: "500",
-                            transition: "background-color 0.3s, color 0.3s",
-                        }}
+                        style={PaginationButtonStyle(page)}
                         onClick={() => handlePageClick(page)}
                         onMouseEnter={(e) => {
                             if (page !== currentPage)
@@ -121,10 +135,11 @@ const Pagination: React.FC<PaginationProps> = ({
                             fontSize: "1.25rem",
                             fontWeight: "500",
                             transition: "background-color 0.3s, color 0.3s",
+                            borderRadius: '50%'
                         }}
                         onClick={() => handlePageClick(currentPage - 1)}
                     >
-                        <MdArrowBackIos />
+                        <MdArrowBackIos/>
                     </button>
                 </li>
                 {renderPageNumbers()}
@@ -146,10 +161,12 @@ const Pagination: React.FC<PaginationProps> = ({
                             fontSize: "1.25rem",
                             fontWeight: "500",
                             transition: "background-color 0.3s, color 0.3s",
+                            borderRadius: '50%'
+
                         }}
                         onClick={() => handlePageClick(currentPage + 1)}
                     >
-                        <MdArrowForwardIos />
+                        <MdArrowForwardIos/>
                     </button>
                 </li>
             </ul>

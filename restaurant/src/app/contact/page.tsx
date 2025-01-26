@@ -5,7 +5,7 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { useSelector } from "react-redux";
-import { themes_color, themes_text_color } from "../page";
+import { themes_color, themes_text_color } from "@/generalData";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { MenuData } from "../../../public/Menu/data";

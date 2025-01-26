@@ -12,19 +12,12 @@ import ReserveSeatImg from "../../../public/reserve_seat.png";
 import { useSelector } from "react-redux";
 import About1Img from "../../../public/about1.png";
 import About2Img from "../../../public/about2.png";
-import Box from "@mui/material/Box";
 import About3Img from "../../../public/about3.png";
-import { themes_color, themes_text_color } from "../page";
+import { themes_color, themes_text_color } from "@/generalData";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { MenuData } from "../../../public/Menu/data";
 import "./page.css";
-import { ElementsShuffler, priceFormat } from "@/global_functions";
-import { BiCartAdd } from "react-icons/bi";
-import Delivery from "@/components/delivery";
 import { Pagination, Rating } from "@mui/material";
-import PaginationCmp from "@/components/pagination";
-import { GoogleMap, Marker } from "@react-google-maps/api";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 interface MealObjectInterface {
@@ -89,11 +82,11 @@ function About() {
                 <div className="history">
                     <h1>Story & Background</h1>
                     <p>
-                        "Established in <p className="highlighted">2015</p>,
+                        "Established in <span className={"highlighted"}>2015</span>,
                         Freshy was born out of a love for traditional{" "}
-                        <p className="highlighted">Moroccan</p> cuisine and a
+                        <span className={"highlighted"}>Moroccan</span> cuisine and a
                         desire to share it with the world. Located in the heart
-                        of <p className="highlighted">Marrakesh</p> our
+                        of <span className={"highlighted"}>Marrakesh</span> our
                         restaurant combines centuries-old recipes with a modern
                         twist."
                     </p>
@@ -180,7 +173,7 @@ function About() {
                         <div className="slider" ref={slider}>
                             {comments.map((v, i) => {
                                 return (
-                                    <div className="comment">
+                                    <div key={i} className="comment">
                                         <p>{v}</p>
                                         <Rating
                                             name="half-rating"

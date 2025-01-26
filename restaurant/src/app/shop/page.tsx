@@ -2,7 +2,7 @@
 import { RootState } from "@/redux/store";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { themes_color, themes_text_color } from "../page";
+import { themes_color, themes_text_color } from "@/generalData";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { MenuData } from "../../../public/Menu/data";
@@ -61,6 +61,7 @@ function Shop() {
                         .map((x, i) => {
                             return (
                                 <div
+                                    key={i}
                                     className={`fdbox ${
                                         x.discount !== "No" && "dsc"
                                     }`}
