@@ -207,7 +207,7 @@ export default function Home() {
                                 {MenuData.burgers[0].discount + "%"}
                             </div>
                             <img
-                                src={`/Menu/Images/shop/${MenuData.burgers[0].image}`}
+                                src={`./Menu/Images/shop/${MenuData.burgers[0].image}`}
                                 alt=""
                             />
                         </div>
